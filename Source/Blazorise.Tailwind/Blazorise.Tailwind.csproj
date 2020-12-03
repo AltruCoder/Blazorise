@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <Import Project="..\..\Build\Blazorise.props" />
+
+  <PropertyGroup>
+    <PackageId>Blazorise.Tailwind</PackageId>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageIcon>Blazorise.png</PackageIcon>
+    <PackageProjectUrl>https://blazorise.com/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/stsrki/Blazorise</RepositoryUrl>
+    <PackageTags>blazorise blazor components tailwind</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.1|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE;NETSTANDARD2_1</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blazorise\Blazorise.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md" Pack="true" Visible="false" PackagePath="" />
+    <None Include="..\..\NuGet\Blazorise.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
+</Project>

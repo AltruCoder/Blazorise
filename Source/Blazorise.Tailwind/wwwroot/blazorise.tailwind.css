@@ -1,0 +1,120 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+#venn {
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+
+    #venn div {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    #venn #midw1 {
+        left: 0px;
+        top: 0px;
+        overflow: hidden;
+    }
+
+    #venn #mid1 {
+        left: 100px;
+        top: 0px;
+    }
+
+    #venn .mid {
+        background: #5850ec;
+        z-index: 15;
+        opacity: 0;
+    }
+
+    #venn #outer1 {
+        left: 0px;
+        top: 0px;
+        background: #5850ec;
+        border: 1px solid #000;
+    }
+
+    #venn #outer2 {
+        left: 100px;
+        top: 0px;
+        background: #5850ec;
+        border: 1px solid #000;
+    }
+
+    #venn .outer {
+        background: #5850ec;
+        z-index: 10;
+        opacity: .6;
+    }
+
+    #venn .exclude {
+        background: #f4f5f7 !important;
+    }
+
+    #venn .outer.exclude {
+        border: 1px solid rgba(0, 0, 0, .6) !important;
+    }
+
+    #venn #midw1 {
+        border-right: 1px solid rgba(0, 0, 0, .6);
+    }
+
+    #venn #mid1.exclude {
+        opacity: 1 !important;
+        border-left: 1px solid rgba(0, 0, 0, .6);
+    }
+
+    #venn #midw1.intersect {
+        opacity: 1 !important;
+    }
+
+    #venn #mid1.intersect {
+        background: #5850ec !important;
+        opacity: .6 !important;
+    }
+
+.fade {
+    transition: opacity 1s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fade {
+        transition: none;
+    }
+}
+
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
